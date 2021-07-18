@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "504af261-d397-46f8-ab88-aad6b402de14",
+		"name": "Practica2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuario",
+							"value": "Byron",
+							"type": "text"
+						},
+						{
+							"key": "rol",
+							"value": "alumno",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Garcia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1NWQ2ZGJiZTUwMTIwNDA0NWRlYjciLCJ1c3VhcmlvIjoiTUFFU1RSTyIsInJvbCI6Im1hZXN0cm8iLCJpYXQiOjE2MTQxMTAyODR9.6gx1aStnj2x2GWCsnLoCF4XG39y7JDnk-YBhIBuqa1o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuario",
+							"value": "Daniel",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "rol",
+							"value": "maestro",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "nombre",
+							"value": "Daniel",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Peren",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/registrarUsuario",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"registrarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarCurso",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1OTI2MDc3ZTczMDIxYjBlZTA4YTUiLCJ1c3VhcmlvIjoiTUFFU1RSTyIsInJvbCI6Im1hZXN0cm8iLCJpYXQiOjE2MTQxMjQ1MjF9.KUn0h59HzYq5VQxk-Ue9LKrwm-DAnAb9BkLigOk-6F0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/eliminarCurso/603592ba77e73021b0ee08a7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eliminarCurso",
+						"603592ba77e73021b0ee08a7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditarCurso",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1OTI2MDc3ZTczMDIxYjBlZTA4YTUiLCJ1c3VhcmlvIjoiTUFFU1RSTyIsInJvbCI6Im1hZXN0cm8iLCJpYXQiOjE2MTQxMjM2NzV9.NkTfowAjml9dmGn2_TMYeaNfo-prgePaqOH2DM-vaoo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Natacion",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/editarCurso/603592ba77e73021b0ee08a7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"editarCurso",
+						"603592ba77e73021b0ee08a7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarCurso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1OTI2MDc3ZTczMDIxYjBlZTA4YTUiLCJ1c3VhcmlvIjoiTUFFU1RSTyIsInJvbCI6Im1hZXN0cm8iLCJpYXQiOjE2MTQxMjM2NzV9.NkTfowAjml9dmGn2_TMYeaNfo-prgePaqOH2DM-vaoo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Mecanografia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/registrarCurso",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"registrarCurso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarCursos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1OTI2MDc3ZTczMDIxYjBlZTA4YTUiLCJ1c3VhcmlvIjoiTUFFU1RSTyIsInJvbCI6Im1hZXN0cm8iLCJpYXQiOjE2MTQxMjM2NzV9.NkTfowAjml9dmGn2_TMYeaNfo-prgePaqOH2DM-vaoo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/mostrarCursos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"mostrarCursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarAlumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Byron",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Garcia",
+							"type": "text"
+						},
+						{
+							"key": "carnet",
+							"value": "2016405",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/registrarAlumno",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"registrarAlumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AsignarCursos",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1OTUzYjYyMzExNzE5NjQxZjQ4ZDMiLCJ1c3VhcmlvIjoiQnlyb24iLCJyb2wiOiJhbHVtbm8iLCJpYXQiOjE2MTQxMjQzNjl9.GuOhBJjuzhQE-6G_EXJLr24TyDRY8gn380CR6g_Ji5s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/asignarCursos/603592c477e73021b0ee08a8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"asignarCursos",
+						"603592c477e73021b0ee08a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerCursosAlumnos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1OTUzYjYyMzExNzE5NjQxZjQ4ZDMiLCJ1c3VhcmlvIjoiQnlyb24iLCJyb2wiOiJhbHVtbm8iLCJpYXQiOjE2MTQxMjQzNjl9.GuOhBJjuzhQE-6G_EXJLr24TyDRY8gn380CR6g_Ji5s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/obtenerCursos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerCursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditarAlumno",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1OTUzYjYyMzExNzE5NjQxZjQ4ZDMiLCJ1c3VhcmlvIjoiQnlyb24iLCJyb2wiOiJhbHVtbm8iLCJpYXQiOjE2MTQxMjU1NjR9.Uaa_t75wzr0qduu7fMpkBHpu0-Es7lQsJSPCi0rw2Os",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Xavi",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "carnet",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/editarAlumno",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"editarAlumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarAlumno",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1OTUzYjYyMzExNzE5NjQxZjQ4ZDMiLCJ1c3VhcmlvIjoiQnlyb24iLCJyb2wiOiJhbHVtbm8iLCJpYXQiOjE2MTQxMjU1NjR9.Uaa_t75wzr0qduu7fMpkBHpu0-Es7lQsJSPCi0rw2Os",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/eliminarAlumno",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eliminarAlumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pdfAlumno",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1OTUzYjYyMzExNzE5NjQxZjQ4ZDMiLCJ1c3VhcmlvIjoiQnlyb24iLCJyb2wiOiJhbHVtbm8iLCJpYXQiOjE2MTQxMjQ1ODh9.pEL98lILTw1FIfzHeB7NdLfZ3vKV4SkcxilAqluooio",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/pdfAlumno",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pdfAlumno"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
